@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS oldproduct;
+
+-- 旧商品表
+CREATE TABLE  oldproduct(
+    product_no INT AUTO_INCREMENT,
+    pname      VARCHAR(50),
+    category   VARCHAR(4) NOT NULL,
+    price      INT NOT NULL,
+    image_path VARCHAR(255),
+    PRIMARY KEY(product_no)
+);
+-- 旧商品表
+INSERT INTO oldproduct(pname, category, price)
+VALUES ('エビマヨネーズ','ピザ',1600);
+INSERT INTO oldproduct(pname, category, price)
+VALUES ('アスパラベーコン','ピザ',1800);
+INSERT INTO oldproduct(pname, category, price)
+VALUES ('ビール','ドリンク',500);
+INSERT INTO oldproduct(pname, category, price)
+VALUES ('レモンチューハイ','ドリンク',350);
+INSERT INTO oldproduct(pname, category, price)
+VALUES ('ウイスキー','ドリンク',3400);
+
+COMMIT;
